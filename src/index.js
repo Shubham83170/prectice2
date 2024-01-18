@@ -18,12 +18,17 @@ import Repear from './Modules/Servicecomponent/Repear';
 import Change from './Modules/Servicecomponent/Change';
 import Laptopbuy from './Modules/Servicecomponent/Laptopbuy';
 import Laptoprepear from './Modules/Servicecomponent/Laptoprepear';
+import { Provider } from 'react-redux';
+import { Mystore } from './Modules/Reduxcomponent/Mystore';
+import Myreduxpage from './Modules/Reduxcomponent/Myreduxpage';
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+
+    <Provider store={Mystore}>
     <BrowserRouter>
     <Mynavbar/>
    
@@ -42,9 +47,11 @@ root.render(
       <Route path='myprops' element={<Props/>}/>
       <Route path='myaxios' element={<Axios/>}/>
       <Route path='myaxios/:id' element={<Detailpage/>}/>
+      <Route path='redux' element={<Myreduxpage/>}/>
      
     </Routes>
     </BrowserRouter>
+    </Provider>
 
 
   </React.StrictMode>

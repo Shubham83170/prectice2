@@ -36,6 +36,9 @@ function Mynavbar() {
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="myaxios">Axios</Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="redux">Redux</Link>
+              </li>
 
 
             </ul>
